@@ -1,8 +1,6 @@
 package main
 
 import (
-	// "fmt"
-
 	"fmt"
 
 	_ "github.com/go-sql-driver/mysql"
@@ -27,12 +25,12 @@ func main() {
 	defer db.Close()
 
 	db.AutoMigrate(&Car{})
-	
+
 	// Insertar una fila
-	// db.Create(&Car{
-	// 	Brand:      "lambogginni",
-	// 	BrandModel: "diablo",
-	// })
+	db.Create(&Car{
+		Brand:      "lamborgginni",
+		BrandModel: "diablo",
+	})
 
 	// Buscar por ID
 	var myCar Car
